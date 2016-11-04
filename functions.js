@@ -24,7 +24,7 @@
  *  Store this value in a variable named `sum`.
  */
 
-function add (num1 + num2) {
+function add (num1, num2) {
 	return num1 + num2;
 };
 var sum = add(500, 100);
@@ -38,10 +38,10 @@ console.log(sum);
  *  Store this value in a variable named `difference`
  */
 
-function subtract () {
-	return b - a;
+function subtract (num1, num2) {
+	return num2 - num1;
 };
-var difference = subtract();
+var difference = subtract(500,9000);
 console.log(difference);
 /**
  *  #4
