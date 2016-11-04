@@ -24,11 +24,11 @@
  *  Store this value in a variable named `sum`.
  */
 
-function add (a,b) {
-	return a + b;
+function add (num1 + num2) {
+	return num1 + num2;
 };
-var sum = add();
-// console.log(add);
+var sum = add(500, 100);
+console.log(sum);
 
 /**
  *  #3
@@ -38,10 +38,11 @@ var sum = add();
  *  Store this value in a variable named `difference`
  */
 
-function subtract (b,a) {
+function subtract () {
 	return b - a;
 };
 var difference = subtract();
+console.log(difference);
 /**
  *  #4
  *  Function - multiply
