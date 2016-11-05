@@ -28,7 +28,7 @@ function add (num1, num2) {
 	return num1 + num2;
 };
 var sum = add(500, 100);
-console.log(sum);
+console.log("Question 1 " +sum); //600
 
 /**
  *  #3
@@ -37,12 +37,11 @@ console.log(sum);
  *  This function returns the result of subtracting `b` from `a`.
  *  Store this value in a variable named `difference`
  */
-
 function subtract (num1, num2) {
 	return num2 - num1;
 };
-var difference = subtract(500,9000);
-console.log(difference);
+var difference = subtract(500,900);
+console.log("Question 2 " +difference); //8500
 /**
  *  #4
  *  Function - multiply
@@ -51,6 +50,11 @@ console.log(difference);
  *  Store this value in a variable named `product`
  */
 
+function multiply (num1, num2) {
+	return (num2 * num1)
+};
+var product = multiply(7,9);
+console.log("Question 3 " +product);
 
 /**
  *  #5
@@ -62,6 +66,14 @@ console.log(difference);
  *  value stored in `difference`.
  */
 
+function checkDifference(X) {
+	return "My football team lost " + X + " times this week";
+}
+
+var checkMinus = checkDifference(difference);
+console.log("Question 5 " + checkMinus);
+
+
 
 /**
  *  #6
@@ -72,7 +84,11 @@ console.log(difference);
  *  "I CAN ADDZ X NUMBERS"  where `X` is the value
  *  stored in the variable `sum`.
  */
-
+ function checkSum(X) {
+ 	console.log("I CAN ADDZ " + X + " NUMBERS");
+ }
+var checkAdd = checkSum(sum);
+console.log(checkAdd);
 
 /**
  *  #7
@@ -84,6 +100,11 @@ console.log(difference);
  */
 
 
+function checkProduct(p, d) {
+	return p*d;
+}
+var num7 = checkProduct (product, subtract(3,5));
+console.log(num7);
 /**
  *  #8
  *  Function - addThenSubtract
@@ -97,7 +118,16 @@ console.log(difference);
  *  **example:**
  *      addThenSubtract(4, 5, 7); //-> returns 2 because 4 + 5 - 7 = 2
  */
-
+// method 1
+function addThenSubtract(num1, num2, num3) {
+	return subtract(num3, add(num1, num2));
+}
+// method 2
+// function addThenSubtract(num1, num2, num3) {
+// 	return num1 + num2 - num3;
+// }
+var pumpkinPie = addThenSubtract(10, 5, 2);
+console.log(pumpkinPie)
 
 /**
  *  #9
@@ -111,6 +141,25 @@ console.log(difference);
  *  Store the return of this function to a variable named `howMany`
  */
 
+// method 1
+function addThenMultiply (num1, num2, num3) {
+	return (num1 + num2) * num3
+}
+var howMany = addThenMultiply(10,20,30);
+console.log(howMany);
+
+// function addThenSubtract(num1, num2, num3) {
+// method 1
+//   return subtract(num3, add(num1, num2));
+
+  // method 2
+  // var result = subtract(num3, add(num1, num2));
+  // return result;
+
+  // method 3
+  // var first = add(num1,num2); // num1 + num2
+  // var second = subtract(num3, first); // first - num3
+  // return second;
 
 /**
  *  #10
@@ -126,7 +175,11 @@ console.log(difference);
  * Call this function and pass your first and last name into it.
  * Store the return value to a variable named `myFullName`
  */
-
+function createFullName (firstName, lastName) {
+	return (firstName + " " + lastName)
+}
+var myFullName = createFullName("Kyle", "Tsuda");
+console.log(myFullName); 
 
 /**
  *  #11
@@ -142,7 +195,17 @@ console.log(difference);
  *  **Call this function and pass in a number value.
  *  Store the return value to a variable named** `canDrinkBeer`
  */
-
+ 
+ 
+ function verifyDrinkingAge(age) {
+ 	if (age >= 21) {
+ 		return "you can drink";
+ 	} else {
+ 		return "you can not drink";
+ 	}
+ }
+ var canDrinkBeer = verifyDrinkingAge (25);
+ console.log(canDrinkBeer); 
 
 /**
  *  #12
@@ -153,7 +216,15 @@ console.log(difference);
  *  "The Party will have tons of Cake!" otherwise this message
  *  should be "This Party will have an open bar".
  */
-
+function throwParty() {
+	if (!canDrinkBeer) { //The exclemation mark switches the boolean 
+		return "The party will have tons of Cake!";
+	} else {
+		return "The party will have an open bar";
+	}
+}
+var whoDrinks = throwParty();
+console.log(whoDrinks);
 
 /**
  *  #13
@@ -175,6 +246,12 @@ console.log(difference);
  *      "Peter Bojanglesloves loves to eat California Burritos"
  */
 
+function eatFood (firstName, lastName, food) {
+	var fullName = createFullName(firstName, lastName);
+	return fullName + " likes to eat " + food + ".";
+}
+var eater = eatFood("Kyle", "Tsuda", "pizza");
+console.log(eater);
 
 /**
  *  #14
